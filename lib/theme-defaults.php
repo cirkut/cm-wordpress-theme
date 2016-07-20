@@ -52,7 +52,11 @@ function genesis_sample_theme_setting_defaults() {
 
 }
 
-add_action( 'genesis_header', 'cm_logo' );
+//* Remove the Genesis title area
+remove_action( 'genesis_site_title', 'genesis_seo_site_title' );
+remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
+
+add_action( 'genesis_site_title', 'cm_logo' );
 /**
 * Adds an SVG logo
 */

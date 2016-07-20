@@ -1,0 +1,16 @@
+@import 'genesis';
+
+.title-area {
+	width: auto;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-align: left;
+	.site-image {
+		width: auto;
+		img {
+			width: 100%;
+			vertical-align: bottom;
+			max-height: 80px;
+		}
+	}
+}
