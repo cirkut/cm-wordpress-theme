@@ -1,16 +1,121 @@
 @import 'genesis';
 
+@import 'variables';
+
+.site-header {
+	position: relative;
+	background: $dark;
+	padding-top: $line-thickness*7;
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: $line-thickness*6;
+		left: $line-thickness*6;
+		right: $line-thickness*6;
+		bottom: 0;
+		border: $line-thickness solid white;
+		border-bottom: none;
+	}
+	.wrap {
+		margin-left: $line-thickness*7;
+		margin-right: $line-thickness*7;
+		padding: $line-thickness*6;
+		max-width: 100%;
+	}
+}
+
+.site-inner {
+	position: relative;
+	background: #eee;
+	max-width: 100%;
+	padding: $line-thickness*6 0;
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: $line-thickness*6;
+		right: $line-thickness*6;
+		bottom: 0;
+		border: $line-thickness solid $dark;
+		border-top: none;
+		border-bottom: none;
+	}
+}
+
+.site-footer {
+	position: relative;
+	background: $dark;
+	padding-top: $line-thickness*7;
+	color: white;
+	&::before {
+		content: "";
+		position: absolute;
+		display: block;
+		top: 0;
+		left: $line-thickness*6;
+		right: $line-thickness*6;
+		bottom: $line-thickness*6;
+		border: $line-thickness solid white;
+		border-top: none;
+	}
+	.wrap {
+		margin-left: $line-thickness*7;
+		margin-right: $line-thickness*7;
+		padding: $line-thickness*6;
+		max-width: 100%;
+	}
+}
+
+.content-sidebar-wrap {
+	position: relative;
+	z-index: 1;
+	max-width: 1280px;
+	margin: 0 auto;
+	padding-left: $line-thickness*7;
+	padding-right: $line-thickness*7;
+}
+
 .title-area {
 	width: auto;
 	padding-top: 0;
 	padding-bottom: 0;
 	text-align: left;
+	span {
+		display: block;
+		float: left;
+	}
+	.site-link {
+		display: block;
+	}
+	.site-text {
+		line-height: $logo-height;
+		font-size: $logo-height / 3;
+		margin-left: $logo-height / 4;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: white;
+	}
 	.site-image {
-		width: auto;
+		width: $logo-height;
 		img {
 			width: 100%;
 			vertical-align: bottom;
-			max-height: 80px;
+			max-height: $logo-height;
+			width: auto;
 		}
+	}
+}
+
+.genesis-nav-menu {
+	position: relative;
+	z-index: 1;
+	padding: 0;
+	a {
+		color: white;
+		margin-right: $line-thickness*7;
+		padding: 0;
+		line-height: $logo-height;
 	}
 }

@@ -1976,6 +1976,86 @@ p.entry-meta {
   }
 }
 
+.site-header {
+  position: relative;
+  background: #333;
+  padding-top: 35px;
+}
+
+.site-header::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 30px;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  border: 5px solid white;
+  border-bottom: none;
+}
+
+.site-header .wrap {
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 30px;
+  max-width: 100%;
+}
+
+.site-inner {
+  position: relative;
+  background: #eee;
+  max-width: 100%;
+  padding: 30px 0;
+}
+
+.site-inner::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  bottom: 0;
+  border: 5px solid #333;
+  border-top: none;
+  border-bottom: none;
+}
+
+.site-footer {
+  position: relative;
+  background: #333;
+  padding-top: 35px;
+  color: white;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 30px;
+  right: 30px;
+  bottom: 30px;
+  border: 5px solid white;
+  border-top: none;
+}
+
+.site-footer .wrap {
+  margin-left: 35px;
+  margin-right: 35px;
+  padding: 30px;
+  max-width: 100%;
+}
+
+.content-sidebar-wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .title-area {
   width: auto;
   padding-top: 0;
@@ -1983,14 +2063,46 @@ p.entry-meta {
   text-align: left;
 }
 
+.title-area span {
+  display: block;
+  float: left;
+}
+
+.title-area .site-link {
+  display: block;
+}
+
+.title-area .site-text {
+  line-height: 80px;
+  font-size: 26.6666666667px;
+  margin-left: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
 .title-area .site-image {
-  width: auto;
+  width: 80px;
 }
 
 .title-area .site-image img {
   width: 100%;
   vertical-align: bottom;
   max-height: 80px;
+  width: auto;
+}
+
+.genesis-nav-menu {
+  position: relative;
+  z-index: 1;
+  padding: 0;
+}
+
+.genesis-nav-menu a {
+  color: white;
+  margin-right: 35px;
+  padding: 0;
+  line-height: 80px;
 }
 
 /*# sourceMappingURL=style.css.map */

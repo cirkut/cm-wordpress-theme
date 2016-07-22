@@ -62,8 +62,10 @@ add_action( 'genesis_site_title', 'cm_logo' );
 */
 function cm_logo() {
 
-	$header_image = '<img alt="" src="' . get_stylesheet_directory_uri() . '/images/cm-black.svg" />';
-	printf( '<div class="site-image">%s</div>', $header_image );
+	$header_image = '<img alt="" src="' . get_stylesheet_directory_uri() . '/images/cm-white.svg" />';
+	$header_text = get_bloginfo('title');
+	$header_link = get_bloginfo('url');
+	printf( '<a class="site-link" href="%s"><span class="site-image">%s</span><span class="site-text">%s</span></a>', $header_link, $header_image, $header_text );
 
 }
 
